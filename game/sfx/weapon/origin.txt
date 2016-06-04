@@ -1,0 +1,49 @@
+TA Weapons Factory:
+bomb_hit.wav
+
+Open LieroX:
+burn.wav
+burning.wav
+flamethrower.wav
+LightningBolt.wav
+soft_crunch.wav
+more_lightning.wav
+more_lightning_fast.wav
+
+Astro Menance:
+emg.wav
+heavy_emg.wav
+
+Golgotha:
+lightning_fire.wav
+small_lightning.wav
+blackhole_fire.wav
+
+Nanoblobs:
+electrical_crackle.wav
+heavy_machinegun.wav
+nanosound2.wav
+saw.wav
+
+Kanoba:
+aoe_aura.wav
+bomb_drop.wav
+bomb_drop_short.wav
+depthcharge.wav
+constant_electric.wav
+blackhole_impact.wav
+
+awesund:
+quick_lightning.wav
+
+Unknown:
+other_lightning.wav
+hiss.wav
+
+burn_mixed.wav - Open LieroX & Nanoblobs
+torpedo.wav - Kanoba & freeloops
+torp_land.wav - Kanoba & Golgotha
+
+UFO:Alien Invasion(modified):
+heatray_fire1.wav 
+heatray_fire2.wav
