@@ -24,7 +24,7 @@ init python:
     SCRIPT_DIR = sys.path[0] + "/game/missions/scripts/"
     SCRIPT_FILENAME_TEMP = "_script.txt"
     SCRIPT_PATH_TEMP = SPRING_DIR + "/" + SCRIPT_FILENAME_TEMP
-    RESULTS_PATH = SPRING_DIR + "/" + "mission_results.json"
+    RESULTS_PATH = SPRING_DIR + "/" + "cache/mission_results.json"
     #RESULTS_PATH = SPRING_DIR + "/" + "results.py"
     #RESULTS_PATH_COMPILED = SPRING_DIR + "/" + "results.pyo" # dunno if necessary to delete this as well
 
