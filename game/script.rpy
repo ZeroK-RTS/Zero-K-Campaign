@@ -25,15 +25,20 @@ label start:
     stop music fadeout 1
     jump intro
 
-label missionStart(missionName):
+label missionStart(missionName, skippable = False):
     stop music fadeout 1
     #play sound "sfx/weapon/blade/blade_swing.wav"
     scene bg blank with blinds
     
-    call run_spring(missionName)
-    $renpy.block_rollback()
-    
-    return _return
+    if skippable:
+        menu:
+            "Skip this mission?"
+            "Yes":
+                return 1
+            "No":
+                call run_spring(missionName)
+                $renpy.block_rollback() 
+                return _return
 
 label gameOver:
     scene cg mainmenu grayscale with fade

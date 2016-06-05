@@ -30,6 +30,7 @@ image cg prologue1 ada = "images/cg/prologue1_ada_intro.png"
 image cg prologue1 rebelvehicles = "images/cg/prologue1_rebelvehicles.png"
 image cg prologue1 transport1 = "images/cg/prologue1_transport_1.png"
 image cg prologue1 transport2 = "images/cg/prologue1_transport_2.png"
+image cg prologue1 transport3 = "images/cg/prologue1_transport_3_alt.png"
 
 
 # ============================================================
