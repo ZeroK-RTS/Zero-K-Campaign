@@ -26,10 +26,10 @@ image cg mainmenu = "images/cg/mainmenu.png"
 image cg mainmenu video = Movie(channel="mainmenuvid", play="videos/mainmenu.avi")
 image cg mainmenu grayscale = im.Grayscale("images/cg/mainmenu.png")
 
-image cg tutorial1 ada = "images/cg/tutorial1_ada_intro.png"
-image cg tutorial1 rebelvehicles = "images/cg/tutorial1_rebelvehicles.png"
-image cg tutorial1 transport1 = "images/cg/tutorial1_transport_1.png"
-image cg tutorial1 transport2 = "images/cg/tutorial1_transport_2.png"
+image cg prologue1 ada = "images/cg/prologue1_ada_intro.png"
+image cg prologue1 rebelvehicles = "images/cg/prologue1_rebelvehicles.png"
+image cg prologue1 transport1 = "images/cg/prologue1_transport_1.png"
+image cg prologue1 transport2 = "images/cg/prologue1_transport_2.png"
 
 
 # ============================================================
@@ -62,8 +62,8 @@ transform chapterTitleAnim:
 # ============================================================
 # TITLE TEXTS
 # ============================================================
-image chapterTitle tutorial1 = Text("Prologue 1", size=32, outlines={(2,"#222",3,3)})
-image chapterTitle2 tutorial1 = Text(chapterTitles["tutorial1"], size=64, outlines={(2,"#222",3,3)})
+image chapterTitle prologue1 = Text("Prologue 1", size=32, outlines={(2,"#222",3,3)})
+image chapterTitle2 prologue1 = Text(chapterTitles["prologue1"], size=64, outlines={(2,"#222",3,3)})
 
 # ============================================================
 # OTHER STUFF

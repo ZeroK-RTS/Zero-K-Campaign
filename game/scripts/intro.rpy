@@ -1,4 +1,4 @@
-﻿label prologue:
+﻿label intro:
     scene bg blank with Fade(1,0,1)
     
     nvl clear
@@ -23,4 +23,4 @@
     nvl clear
     nvl hide dissolveFast
     
-    jump tutorial1_intro
+    jump prologue1_intro

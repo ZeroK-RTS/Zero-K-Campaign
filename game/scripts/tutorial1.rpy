@@ -1,11 +1,11 @@
-﻿image textimg tutorial1 = Text("29 days, 13 hours before the Stasis", size=32, outlines={(2,"#222",3,3)})
+﻿image textimg prologue1 = Text("29 days, 13 hours before the Stasis", size=32, outlines={(2,"#222",3,3)})
 
-label tutorial1_intro:
+label prologue1_intro:
     $ renpy.movie_cutscene("videos/op.webm")
     scene bg blank with fade
     
-    show chapterTitle tutorial1 at chapterTitlePos, chapterTitleAnim
-    show chapterTitle2 tutorial1 at chapterTitlePos2, chapterTitleAnim
+    show chapterTitle prologue1 at chapterTitlePos, chapterTitleAnim
+    show chapterTitle2 prologue1 at chapterTitlePos2, chapterTitleAnim
     pause 5
     hide chapterTitle
     hide chapterTitle2
@@ -17,7 +17,7 @@ label tutorial1_intro:
     "But the Imperial golden age has come and gone. Now turmoil and dissension saps its strength from within, and the Empire's many enemies pour over its borders in a flood, sweeping all before them."
     "Now, the crisis is coming to a head..."
     
-    show textimg tutorial1 at truecenter with dissolve
+    show textimg prologue1 at truecenter with dissolve
     pause
     hide textimg with dissolveFast
     
@@ -41,7 +41,7 @@ label tutorial1_intro:
     show bg fieldsofisis with Shake(CENTER_TUPLE, 1.0, dist=16)
     pause 1
     
-    scene cg tutorial1 rebelvehicles with dissolve
+    scene cg prologue1 rebelvehicles with dissolve
     play sound "sfx/reply/vehicle_move.wav"
     "The rebel army surges upon the loyalist position guarding the pass in a wave of steel."
     #play sound "sfx/weapon/laser/heavy_laser3.wav"
@@ -54,7 +54,7 @@ label tutorial1_intro:
     ada "You're the ones serving the false Emperor!!" with hpunch
     sophia "You know they can't hear you, right?"
     
-    scene cg tutorial1 ada with dissolve
+    scene cg prologue1 ada with dissolve
     "My name is Ada Eveline Caedmon. Captain, 13th Imperial Auxiliary Cohort."
     "For years I've served the Emperor of Earth, battling rebels, invaders and pretenders in his name."
     "Now I've come to this barren land with my trusted AI aide Sophia, in the hope of buying a little more time for the defenders of the Throne world to prepare for the final onslaught."
@@ -70,10 +70,10 @@ label tutorial1_intro:
     sophia "There is nothing we can do here, friend Ada. Our deaths will not stop this advance."
     ada "Ugh... Fine. Transport, prepare for a hot extraction."
     
-    scene cg tutorial1 transport1 with dissolve
+    scene cg prologue1 transport1 with dissolve
     imperial "Copy that. Transport is– Mud spike! Enemy SAM detected!"
     play sound "sfx/weapon/missile/missile_fire3.wav"
-    scene cg tutorial1 transport2 with dissolve
+    scene cg prologue1 transport2 with dissolve
     pause 0.5
     play sound "sfx/weapon/missile/missile_fire3.wav"
     pause 0.5
@@ -86,7 +86,7 @@ label tutorial1_intro:
     ada "Wonderful. I don't suppose you have another way out of here?"
     sophia "We do have a second transport. There's still time; we need to fight out way through the flanking forces and get to the secondary extraction point."
     
-    scene cg tutorial1 ada with dissolve
+    scene cg prologue1 ada with dissolve
     ada "All right, then. Come and get me, you usurping dogs!"
     
     call missionStart("sunrise_prologue1")

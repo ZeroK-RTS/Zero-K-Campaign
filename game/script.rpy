@@ -23,11 +23,11 @@ init python:
 # The game starts here.
 label start:
     stop music fadeout 1
-    jump prologue
+    jump intro
 
 label missionStart(missionName):
     stop music fadeout 1
-    play sound "sfx/weapon/blade/blade_swing.wav"
+    #play sound "sfx/weapon/blade/blade_swing.wav"
     scene bg blank with blinds
     
     call run_spring(missionName)

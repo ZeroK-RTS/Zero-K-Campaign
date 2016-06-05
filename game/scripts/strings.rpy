@@ -1,5 +1,5 @@
 ﻿init python:
     chapterTitles = {
-        "tutorial1":"Blood Dawn",
-        "tutorial2":"Delaying Action",
+        "prologue1":"Blood Dawn",
+        "prologue2":"Cold Path",
     }
