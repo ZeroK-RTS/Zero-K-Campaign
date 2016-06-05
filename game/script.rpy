@@ -26,8 +26,10 @@ label start:
     jump intro
 
 label missionStart(missionName, skippable = False):
+    play sound "sfx/weapon/blade/blade_swing.wav"
+    show preBattleText at truecenter, chapterTitleAnim
+    pause
     stop music fadeout 1
-    #play sound "sfx/weapon/blade/blade_swing.wav"
     scene bg blank with blinds
     
     if skippable:
@@ -45,6 +47,15 @@ label gameOver:
     show gameOverText at truecenter with dissolve
     pause
     scene bg blank with pixellate
+    return
+
+label chapterEnd:
+    #scene cg mainmenu video
+    scene bg blank
+    show zklogo at truecenter   #topleft
+    with fade
+    pause
+    scene bg blank with fade
     return
 
 label splashscreen:

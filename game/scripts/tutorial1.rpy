@@ -101,9 +101,10 @@ label prologue1_intro:
     ada "Alright, let's get out of here!"
     sophia "We'll head for Fort Hathor. Let our efforts have bought them time enough to stop the rebels here."
     
-    scene bg blank with fade
+    stop music fadeout 1
+    call chapterEnd
+    
     "Until next time..."
     scene bg blank with fade
     
-    stop music fadeout 1
     return
