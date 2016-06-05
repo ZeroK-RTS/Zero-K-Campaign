@@ -7,8 +7,13 @@
 ## commented-out code, and you may want to uncomment them when
 ## appropriate.
 
-init -1 python hide:
+init -1 python:
+    ## This controls where the VN looks for Spring engine files.
+    
+    # My Games/Spring/campaign/game/../../engine/100.0
+    SPRING_DIR = "D:/Games/Spring/engine/100.0" #"sys.path[0]/../../engine/100.0"
 
+init -1 python hide: 
     ## These control the width and height of the screen.
 
     config.screen_width = 1280
