@@ -55,10 +55,10 @@ label tutorial1_intro:
     sophia "You know they can't hear you, right?"
     
     scene cg tutorial1 ada with dissolve
-    "My name is Ada Eveline Caedmon. Captan, 13th Imperial Auxiliary Cohort."
+    "My name is Ada Eveline Caedmon. Captain, 13th Imperial Auxiliary Cohort."
     "For years I've served the Emperor of Earth, battling rebels, invaders and pretenders in his name."
     "Now I've come to this barren land with my trusted AI aide Sophia, in the hope of buying a little more time for the defenders of the Throne world to prepare for the final onslaught."
-    "There may not be an empire for me to serve much longer, but until that moment comes to pass, I will stand and fight!"
+    #"There may not be an empire for me to serve much longer, but until that moment comes to pass, I will stand and fight!"
     
     scene bg fieldsofisis with dissolve
     play sound "sfx/explosion/ex_med4.wav"
@@ -68,13 +68,15 @@ label tutorial1_intro:
     sophia "Enemy artillery is thirteen clicks out. The situation is untenable; we should withdraw while we can."
     ada "What, we're supposed to just cut and run like that?"
     sophia "There is nothing we can do here, friend Ada. Our deaths will not stop this advance."
-    ada "Ugh, I guess you're right. Transport, prepare for a hot extraction."
+    ada "Ugh... Fine. Transport, prepare for a hot extraction."
     
     scene cg tutorial1 transport1 with dissolve
     imperial "Copy that. Transport is– Mud spike! Enemy SAM detected!"
     play sound "sfx/weapon/missile/missile_fire3.wav"
     scene cg tutorial1 transport2 with dissolve
-    pause 1
+    pause 0.5
+    play sound "sfx/weapon/missile/missile_fire3.wav"
+    pause 0.5
     scene bg fieldsofisis sky with dissolve
     pause 0.5
     play sound "sfx/explosion/ex_med6.wav"
@@ -87,6 +89,20 @@ label tutorial1_intro:
     scene cg tutorial1 ada with dissolve
     ada "All right, then. Come and get me, you usurping dogs!"
     
+    call missionStart("sunrise_prologue1")
     
+    if _return == 0:
+        jump gameOver
+    if _return == -1:
+        return
     
+    play music "music/Inspiring.mp3"
+    scene bg fieldsofisis sky with Fade(0, 0, 1)
+    ada "Alright, let's get out of here!"
+    sophia "We'll head for Fort Hathor. Let our efforts have bought them time enough to stop the rebels here."
+    
+    scene bg blank with fade
+    "Until next time..."
+    
+    stop music fadeout 1
     return

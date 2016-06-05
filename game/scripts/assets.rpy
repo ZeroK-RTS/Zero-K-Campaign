@@ -19,6 +19,9 @@ image zklogo mainmenu:
     xalign 0.3 ypos 0.2 yanchor 0.5 alpha 0 xzoom 0
     linear 0.15 xalign 0.5 alpha 1 xzoom 1
     
+image gameOverText:
+    Text("game over", size=48, outlines={(2,"#222",3,3)})
+    
 image cg mainmenu = "images/cg/mainmenu.png"
 image cg mainmenu video = Movie(channel="mainmenuvid", play="videos/mainmenu.avi")
 image cg mainmenu grayscale = im.Grayscale("images/cg/mainmenu.png")

@@ -24,5 +24,3 @@
     nvl hide dissolveFast
     
     jump tutorial1_intro
-    #return      # TODO
-    
