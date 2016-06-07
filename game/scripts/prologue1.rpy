@@ -21,7 +21,7 @@ label prologue1_intro:
     pause
     hide textimg with dissolveFast
     
-    play music "music/Evacuation_(Action).mp3"
+    play music soundtracks["Evacuation (Action)"]
     scene bg fieldsofisis with fade
     
     imperial "Rebel units approaching! Range 700!"
@@ -65,9 +65,12 @@ label prologue1_intro:
     show bg fieldsofisis with Shake(CENTER_TUPLE, 1.0, dist=16)
     
     ada "Damn. There's millions of them."
-    sophia "Enemy artillery is thirteen clicks out. The situation is untenable; we should withdraw while we can."
-    ada "What, we're supposed to just cut and run like that?"
-    sophia "There is nothing we can do here, friend Ada. Our deaths will not stop this advance."
+    sophia "Enemy artillery is thirteen clicks out. The situation will soon become untenable."
+    ada "Reinforcements?"
+    sophia "None can arrive till we've been shelled for at least three minutes. And given the situation on the rest of the front, none may arrive at all. We should withdraw while we can."
+    ada "I don't like the idea of cutting and running while someone else dies to cover my retreat."
+    sophia "How do you feel about both you and them dying, friend Ada?"
+    "That's Sophia for you. She's nice and really helpful, but at times she can be a real smartass without even trying."
     ada "Ugh... Fine. Transport, prepare for a hot extraction."
     
     scene cg prologue1 transport1 with dissolve
@@ -80,7 +83,7 @@ label prologue1_intro:
     scene bg fieldsofisis sky with dissolve
     pause 0.5
     play sound "sfx/explosion/ex_med6.wav"
-    show bg fieldsofisis sky with Shake(CENTER_TUPLE, 1.0, dist=16)
+    show bg fieldsofisis sky with vpunch        #Shake(CENTER_TUPLE, 1.0, dist=16)
     
     sophia "It seems we are surrounded, friend Ada. I can only assume the 11th cohort has been broken."
     ada "Wonderful. I don't suppose you have another way out of here?"
@@ -96,7 +99,7 @@ label prologue1_intro:
     if _return == -1:
         return
     
-    play music "music/Inspiring.mp3"
+    play music soundtracks["Inspiring"]
     scene cg prologue1 transport3 with Fade(1, 0, 1)
     ada "Alright, let's get out of here!"
     sophia "We'll head for Fort Hathor. Let our efforts have bought them time enough to stop the rebels here."

@@ -1,4 +1,5 @@
 ﻿label intro:
+    #play music soundtracks["Intro"]
     scene bg blank with Fade(1,0,1)
     
     nvl clear
@@ -22,5 +23,6 @@
     
     nvl clear
     nvl hide dissolveFast
+    stop music fadeout 1
     
     jump prologue1_intro

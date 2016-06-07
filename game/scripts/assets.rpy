@@ -70,5 +70,15 @@ image chapterTitle prologue1 = Text("Prologue 1", size=32, outlines={(2,"#222",3
 image chapterTitle2 prologue1 = Text(chapterTitles["prologue1"], size=64, outlines={(2,"#222",3,3)})
 
 # ============================================================
+# MUSIC
+# ============================================================
+init python:
+    soundtracks = {
+        "Intro" : "<to 71>music/Intro.mp3",
+        "Evacuation (Action)" : "<to 103>music/Evacuation_(Action).mp3",
+        "Inspiring" : "<to 106>music/Inspiring.mp3"
+    }
+
+# ============================================================
 # OTHER STUFF
 # ============================================================
