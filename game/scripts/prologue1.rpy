@@ -1,4 +1,4 @@
-﻿image textimg prologue1 = MakeTitleText("29 days, 13 hours before the Stasis")
+﻿image textimg prologue1 = MakeTitleText("29 days, 13 hours before the Stasis", 32)
 
 label prologue1_intro:
     $ renpy.movie_cutscene("videos/op.webm")
@@ -92,13 +92,15 @@ label prologue1_intro:
     scene cg prologue1 ada with dissolve
     ada "All right, then. Come and get me, you usurping dogs!"
     
-    call missionStart("sunrise_prologue1", True)
+label prologue1_battle:
+    call missionStart("sunrise_prologue1", tutorial=True)
     
     if _return == 0:
         jump gameOver
     if _return == -1:
         return
     
+label prologue1_outro:
     play music soundtracks["Inspiring"]
     scene cg prologue1 transport3 with Fade(1, 0, 1)
     ada "Alright, let's get out of here!"
@@ -107,7 +109,6 @@ label prologue1_intro:
     stop music fadeout 1
     call chapterEnd
     
-    "Until next time..."
-    scene bg blank with fade
+    jump prologue2_intro
     
     return

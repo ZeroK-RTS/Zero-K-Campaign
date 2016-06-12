@@ -224,7 +224,7 @@ init -1 python hide:
     config.end_splash_transition = Fade(0,0,1)
 
     ## Used when entering the main menu after the game has ended.
-    config.end_game_transition = None
+    config.end_game_transition = Fade(1,0,1)
 
     ## Used when a game is loaded.
     config.after_load_transition = None

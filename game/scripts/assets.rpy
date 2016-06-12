@@ -2,8 +2,9 @@
 # BACKGROUNDS
 # ============================================================
 image bg blank = "images/bg/blank.png"
-image bg fieldsofisis = im.Scale("images/bg/fields_of_isis.png", SCREENSIZE_X, SCREENSIZE_Y)
-image bg fieldsofisis sky = im.Scale("images/bg/fields_of_isis_sky.png", SCREENSIZE_X, SCREENSIZE_Y)
+image bg fieldsofisis = "images/bg/fields_of_isis.png"  #im.Scale("images/bg/fields_of_isis.png", SCREENSIZE_X, SCREENSIZE_Y)
+image bg fieldsofisis sky = "images/bg/fields_of_isis_sky.png" #im.Scale("images/bg/fields_of_isis_sky.png", SCREENSIZE_X, SCREENSIZE_Y)
+image bg glacies = "images/bg/glacies.png"
 
 # ============================================================
 # CG
@@ -18,6 +19,7 @@ image cg prologue1 transport1 = "images/cg/prologue1_transport_1.png"
 image cg prologue1 transport2 = "images/cg/prologue1_transport_2.png"
 image cg prologue1 transport3 = "images/cg/prologue1_transport_3_alt.png"
 
+image cg prologue2 ada = "images/cg/prologue2_ada_water.png"
 
 # ============================================================
 # CHARACTERS
@@ -25,6 +27,7 @@ image cg prologue1 transport3 = "images/cg/prologue1_transport_3_alt.png"
 define ada = Character("Ada", color = '#0df5f3')
 define sophia = Character("Sophia", color = '#008080')
 define imperial = Character("Imperial Unit", color = '#9600FF')
+define imperialColonel = Character("Colonel Aethelred", color = '#9600FF')
 define rebels = Character("Rebel Units", color = '#FF4141')
 define nvlChar = Character("", kind=nvl)
 
@@ -50,8 +53,8 @@ transform chapterTitleAnim(dt = 0.5):
 # TITLE TEXTS
 # ============================================================
 init python:
-    def MakeTitleText(text):
-        return Text(text=text, size=32, outlines={(2,"#222",3,3)})
+    def MakeTitleText(text, size=48):
+        return Text(text=text, size=size, outlines={(2,"#222",3,3)})
 
 image zklogo = "images/zk_logo.png"
 
@@ -84,6 +87,8 @@ init python:
         "Intro" : "<to 71>music/Intro.mp3",
         "Evacuation (Action)" : "<to 103>music/Evacuation (Action).mp3",
         "Inspiring" : "<to 106>music/Inspiring.mp3",
+        "March" : "<to 66>music/March.mp3",
+        "March (alt)" : "<to 146.3>music/March (alt).mp3"
     }
 
 # ============================================================

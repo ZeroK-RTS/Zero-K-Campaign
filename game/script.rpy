@@ -25,22 +25,32 @@ label start:
     stop music fadeout 1
     jump intro
 
-label missionStart(missionName, skippable = False):
+label missionStart(missionName, **kwargs):
     play sound "sfx/weapon/blade/blade_swing.wav"
     show preBattleText at truecenter, chapterTitleAnim
     pause
     stop music fadeout 1
     scene bg blank with blinds
     
-    if skippable:
+    if kwargs["tutorial"]:
+        menu:
+            "Skip the tutorial mission?"
+            "Yes":
+                return 1
+            "No":
+                pass
+                
+    elif kwargs["skippable"]:
         menu:
             "Skip this mission?"
             "Yes":
                 return 1
             "No":
-                call run_spring(missionName)
-                $renpy.block_rollback() 
-                return _return
+                pass
+            
+    call run_spring(missionName)
+    $renpy.block_rollback() 
+    return _return 
 
 label gameOver:
     scene cg mainmenu grayscale with fade
