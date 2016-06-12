@@ -82,8 +82,8 @@ image chapterTitle2 prologue2 = MakeTitleText(chapterTitles["prologue2"])
 init python:
     soundtracks = {
         "Intro" : "<to 71>music/Intro.mp3",
-        "Evacuation (Action)" : "<to 103>music/Evacuation_(Action).mp3",
-        "Inspiring" : "<to 106>music/Inspiring.mp3"
+        "Evacuation (Action)" : "<to 103>music/Evacuation (Action).mp3",
+        "Inspiring" : "<to 106>music/Inspiring.mp3",
     }
 
 # ============================================================
