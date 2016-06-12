@@ -1,4 +1,4 @@
-﻿image textimg prologue1 = Text("29 days, 13 hours before the Stasis", size=32, outlines={(2,"#222",3,3)})
+﻿image textimg prologue1 = MakeTitleText("29 days, 13 hours before the Stasis")
 
 label prologue1_intro:
     $ renpy.movie_cutscene("videos/op.webm")

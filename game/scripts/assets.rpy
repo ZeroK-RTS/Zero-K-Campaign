@@ -49,6 +49,10 @@ transform chapterTitleAnim(dt = 0.5):
 # ============================================================
 # TITLE TEXTS
 # ============================================================
+init python:
+    def MakeTitleText(text):
+        return Text(text=text, size=32, outlines={(2,"#222",3,3)})
+
 image zklogo = "images/zk_logo.png"
 
 image zklogo mainmenu:
@@ -66,8 +70,11 @@ image gameOverText = Text("game over", size=48, outlines={(2,"#222",3,3)})
     
 image preBattleText = Text("PREPARE FOR BATTLE", size=64, outlines={(3,"#222",2,2)})
 
-image chapterTitle prologue1 = Text("Prologue 1", size=32, outlines={(2,"#222",3,3)})
-image chapterTitle2 prologue1 = Text(chapterTitles["prologue1"], size=64, outlines={(2,"#222",3,3)})
+image chapterTitle prologue1 = MakeTitleText("Prologue 1")
+image chapterTitle2 prologue1 = MakeTitleText(chapterTitles["prologue1"])
+
+image chapterTitle prologue2 = MakeTitleText("Prologue 2")
+image chapterTitle2 prologue2 = MakeTitleText(chapterTitles["prologue2"])
 
 # ============================================================
 # MUSIC
