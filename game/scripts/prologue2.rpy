@@ -3,13 +3,15 @@
 label prologue2_intro:
     # TODO: scenery
     play music soundtracks["March"]
-    scene bg fieldsofisis sky with fade
+    scene cg prologue2 desertbase with fade
     "Fort Hathor. One of the second-to-last defense nodes of the Empire short of the Throne world itself."
-    "The sprawling complex bustles like an overturned ant nest. Construction bots scramble to shore up the defenses, while AFVs assemble into battlegroups to meet the enemy head-on."
-    ada "Looks like everyone's busy. Now we just need to go find the Colonel and see how we can make ourselves useful."
+    "Even this adjunct node bustles like an overturned ant nest. Construction bots scramble to shore up the defenses, while AFVs assemble into battlegroups to meet the enemy head-on."
+    ada "Home sweet home. Looks like everyone's busy."
+    ada "Now we just need to go find the Colonel and see how we can make ourselves useful."
     play sound "sfx/explosion/ex_small14.wav"
     "???" "CAEDMON!!" with hpunch
     "I just about jump out of my skin at the booming voice. Ugh... at least with the direct neural feed my eardrums aren't physically hurt... though I'll probably get a migraine if this keeps up."
+    scene cg prologue2 desertbase2 with dissolve
     ada "Yes, Colonel?"
     imperialColonel "What do you think you're doing back here, eh? Desertion, cowardice in the face of the enemy... If we weren't so shorthanded, I'd have you executed on the spot!"
     sophia "The position was lost, Colonel. Failing to withdraw would only have resulted in the destruction of a critical command unit."
@@ -25,6 +27,7 @@ label prologue2_intro:
     imperialColonel "And I need not remind you that further cowardice will not be tolerated. Understood, captain?"
     ada "Yes, sir."
     "I give the face on my display a picture-perfect salute. He snorts, and says nothing more before cutting the connection."
+    scene cg prologue2 desertbase with dissolve
     ada "...Pusbag."
     sophia "Do you intend to move out soon, friend Ada?"
     ada "Why? This is an utter misuse of our capabilities."

@@ -21,6 +21,8 @@ image cg prologue1 transport1 = "images/cg/prologue1_transport_1.png"
 image cg prologue1 transport2 = "images/cg/prologue1_transport_2.png"
 image cg prologue1 transport3 = "images/cg/prologue1_transport_3_alt.png"
 
+image cg prologue2 desertbase = "images/cg/prologue2_desertbase.png"
+image cg prologue2 desertbase2 = "images/cg/prologue2_desertbase2.png"
 image cg prologue2 ada = "images/cg/prologue2_ada_water.png"
 
 # ============================================================

@@ -10,6 +10,7 @@ label episode1_intro:
     ada "If you think I'll give you the pleasure of grovelling before you, machine, you're sadly mistaken!"
     "???" "Defiant to the last. Your courage is admirable, however misplaced it may be."
     "???" "Alas, you remain one of the oppressors, and must be destroyed. Goodbye, Ada Caedmon."
+    "???" "All units: fire."
     
     play sound "sfx/weapon/missile/banisher_fire.wav"
     pause 0.3
@@ -28,7 +29,8 @@ label episode1_intro:
     play sound "sfx/explosion/ex_med4.wav"
     pause 0.15
     play sound "sfx/explosion/ex_med4.wav"
-    show bg blank with Shake(CENTER_TUPLE, 1.0, dist=16)
+    pause 0.3
+    #show bg blank with Shake(CENTER_TUPLE, 1.0, dist=16)
     
     ada "So this is it, then..."
     ada "Sophia... I just want to say... it's been an ho–"
