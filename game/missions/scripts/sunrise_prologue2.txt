@@ -1,0 +1,45 @@
+[GAME]
+{
+	MapName=Glacies 1.3;
+	StartposType=2;
+	GameType=Sunrise Prologue 2 - Cold Dawn;
+	IsHost=1;
+	OnlyLocal=1;
+	MyPlayerName=Ada;
+	[MODOPTIONS]
+	{
+		disablemapdamage = 1;
+	}
+	[PLAYER0]
+	{
+		Name=Ada;
+		Team=0;
+	}
+	[AI0]
+	{
+		Name=Machines;
+		ShortName=NullAI;
+		Team=1;
+		Host=0;
+	}
+	[TEAM0]
+	{
+		TeamLeader=0;
+		AllyTeam=0;
+		RGBColor=0.004024717 0.9130986 0.8962694;
+	}
+	[TEAM1]
+	{
+		TeamLeader=0;
+		AllyTeam=1;
+		RGBColor=1 0 0;
+	}
+	[ALLYTEAM0]
+	{
+		NumAllies=0;
+		StartRectTop=0;		StartRectBottom=0;		StartRectLeft=1;		StartRectRight=1;	}
+	[ALLYTEAM1]
+	{
+		NumAllies=0;
+		StartRectTop=0;		StartRectBottom=0;		StartRectLeft=1;		StartRectRight=1;	}
+}

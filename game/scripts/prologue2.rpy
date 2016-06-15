@@ -1,4 +1,4 @@
-﻿image textimg prologue2 = MakeTitleText("13 days, 9 hours before the Stasis", 32)
+﻿image textimg prologue2 = MakeTitleText("19 days, 9 hours before the Stasis", 32)
 
 label prologue2_intro:
     # TODO: scenery
@@ -26,13 +26,15 @@ label prologue2_intro:
     ada "Yes, sir."
     "I give the face on my display a picture-perfect salute. He snorts, and says nothing more before cutting the connection."
     ada "...Pusbag."
-    sophia "This is an utter misuse of our capabilities, friend Ada."
-    ada "You want to tell him that?"
+    sophia "Do you intend to move out soon, friend Ada?"
+    ada "Why? This is an utter misuse of our capabilities."
     sophia "Nevertheless, we have our orders. It is now up to use to carry them out to the best of our ability."
     ada "I suppose so. I just wish I knew if it'll all matter in the end."
     
     stop music fadeout 1
     scene bg blank with fade
+    
+label prologue2:
     $ renpy.movie_cutscene("videos/op.webm")
     
     show chapterTitle prologue2 at chapterTitlePos, chapterTitleAnim
@@ -85,12 +87,48 @@ label prologue2_intro:
     scene cg prologue2 ada with dissolve
     ada "Actually, why isn't the river frozen?"
     sophia "It's not actually a river. It's an... elongated lake formed in a recessed channel when local geothermal activity melted the snow. Actually, I think at least one end connects to an underground aquifer as well."
+    ada" Interesting."
     "I'd admit, it's actually quite pretty. Calming, even."
     "The whole valley is like that, really. It's too bad it won't be that way for much longer now."
-    ada "Well, we'd better get ready. If the Machines really are here, it's only a matter of time... and I don't intend to run away again."
+    show bg glacies sky with dissolve
+    "..."
+    ada "...Well, we'd better get ready. If the Machines really are here, it's only a matter of time... and I don't intend to run away again."
     
+label prologue2_battle:
+    call missionStart("sunrise_prologue2", tutorial=True)
+    
+    if _return == 0:
+        jump gameOver
+    if _return == -1:
+        return    
+
+label prologue2_outro:
+    show bg glacies with fade
+    play sound "sfx/explosion/ex_med4.wav"
+    show bg glacies with Shake(CENTER_TUPLE, 1.0, dist=16)
+    #play music "sfx/ambience/outdoor-windy-ambience.ogg"
+    
+    ada "And that's the last of them."
+    sophia "I would have expected a larger enemy presence..."
+    
+    play sound {"sfx/message_team.wav", "sfx/message_team.wav"}
+    imperial "Sector HQ to 13th Cohort, come in! 13th Cohort–"
+    ada "HQ, 13th Actual. We've encountered and–"
+    play music soundtracks["Tension"]
+    imperial "Forget that! The enemy is headed for Hadrian! The Promethean has been sighted! I repeat, the Promethean has been sighted!"
+    ada "...!"
+    sophia "It appears this was merely a feint."
+    "The leader of the Free Machines? Leading an invasion into imperial territory himself?"
+    "This is bad. Really bad."
+    ada "Orders, command?"
+    imperial "All units are to return to Hadrian at once. Command wants the incursion stopped here and the Promethean neutralized. Do you copy?"
+    ada "Copy, command. Returning to base."
     scene bg blank with fade
+    ada "Well, Sophia, our weekend just got a whole lot more interesting."
     
-    "TO BE CONTINUED"
+    stop music fadeout 1
+    call chapterEnd
+    
+    jump episode1_intro
     
     return

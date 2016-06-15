@@ -2,9 +2,11 @@
 # BACKGROUNDS
 # ============================================================
 image bg blank = "images/bg/blank.png"
+image bg white = "images/bg/white.png"
 image bg fieldsofisis = "images/bg/fields_of_isis.png"  #im.Scale("images/bg/fields_of_isis.png", SCREENSIZE_X, SCREENSIZE_Y)
 image bg fieldsofisis sky = "images/bg/fields_of_isis_sky.png" #im.Scale("images/bg/fields_of_isis_sky.png", SCREENSIZE_X, SCREENSIZE_Y)
 image bg glacies = "images/bg/glacies.png"
+image bg glacies sky = "images/bg/glacies_sky.png"
 
 # ============================================================
 # CG
@@ -74,21 +76,27 @@ image gameOverText = Text("game over", size=48, outlines={(2,"#222",3,3)})
 image preBattleText = Text("PREPARE FOR BATTLE", size=64, outlines={(3,"#222",2,2)})
 
 image chapterTitle prologue1 = MakeTitleText("Prologue 1")
-image chapterTitle2 prologue1 = MakeTitleText(chapterTitles["prologue1"])
+image chapterTitle2 prologue1 = MakeTitleText("Blood Dawn")
 
 image chapterTitle prologue2 = MakeTitleText("Prologue 2")
-image chapterTitle2 prologue2 = MakeTitleText(chapterTitles["prologue2"])
+image chapterTitle2 prologue2 = MakeTitleText("Cold Path")
+
+image chapterTitle episode1 = MakeTitleText("Episode 1")
+image chapterTitle2 episode1 = MakeTitleText("Awakening")
 
 # ============================================================
 # MUSIC
 # ============================================================
 init python:
     soundtracks = {
-        "Intro" : "<to 71>music/Intro.mp3",
         "Evacuation (Action)" : "<to 103>music/Evacuation (Action).mp3",
         "Inspiring" : "<to 106>music/Inspiring.mp3",
+        "Intro" : "<to 71>music/Intro.mp3",
+        "Intense" : "<to 86.5>music/Intense.mp3",
         "March" : "<to 66>music/March.mp3",
-        "March (alt)" : "<to 146.3>music/March (alt).mp3"
+        "March (alt)" : "<to 146.3>music/March (alt).mp3",
+        "Suspense" : "<to 113.3>music/Suspense.mp3",
+        "Tension" : "<to 71.6>music/Tension.mp3",
     }
 
 # ============================================================

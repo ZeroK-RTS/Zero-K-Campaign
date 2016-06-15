@@ -1,0 +1,16 @@
+
+Adventure:
+	Pirates (Celestial Aeon Project) 
+
+New dawn: 
+	Epic (Celestial Aeon Project)
+
+Credits: 
+	Dramatic (Celestial Aeon Project)
+
+Imminent danger:
+	Intense (Celestial Aeon Project)
+	
+Alert:
+	Suspense (Celestial Aeon Project)
+	Tension (Celestial Aeon Project)
