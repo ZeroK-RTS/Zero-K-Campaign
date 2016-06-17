@@ -7,6 +7,8 @@ image bg fieldsofisis = "images/bg/fields_of_isis.png"  #im.Scale("images/bg/fie
 image bg fieldsofisis sky = "images/bg/fields_of_isis_sky.png" #im.Scale("images/bg/fields_of_isis_sky.png", SCREENSIZE_X, SCREENSIZE_Y)
 image bg glacies = "images/bg/glacies.png"
 image bg glacies sky = "images/bg/glacies_sky.png"
+image bg fullmoon sky = "images/bg/fullmoon_sky.png"
+image bg fullmoon sky semisepia = "images/bg/fullmoon_sky_semisepia.png"
 
 # ============================================================
 # CG
@@ -25,13 +27,21 @@ image cg prologue2 desertbase = "images/cg/prologue2_desertbase.png"
 image cg prologue2 desertbase2 = "images/cg/prologue2_desertbase2.png"
 image cg prologue2 ada = "images/cg/prologue2_ada_water.png"
 
+image cg episode1 promethean = "images/cg/episode1_promethean_flames.png"
+image cg episode1 promethean semisepia = "images/cg/episode1_promethean_flames_semisepia.png"
+
+# ============================================================
+# ICONS
+# ============================================================
+image factionicon empire = im.FactorScale("images/icons/Empire3.png", 2)
+
 # ============================================================
 # CHARACTERS
 # ============================================================
 define ada = Character("Ada", color = '#0df5f3')
 define sophia = Character("Sophia", color = '#008080')
 define imperial = Character("Imperial Unit", color = '#9600FF')
-define imperialColonel = Character("Colonel Aethelred", color = '#9600FF')
+define imperialColonel = Character("Imperial Colonel", color = '#9600FF')
 define rebels = Character("Rebel Units", color = '#FF4141')
 define nvlChar = Character("", kind=nvl)
 
@@ -52,7 +62,15 @@ transform chapterTitleAnim(dt = 0.5):
         alpha 1 xzoom 1 yzoom 1
         linear dt alpha 0 xzoom 4 yzoom 2
     
-    
+transform spinY(dt = 1):
+    xzoom 1
+    block:
+        easeout dt xzoom 0
+        easein dt xzoom -1
+        easeout dt xzoom 0
+        easein dt xzoom 1
+        repeat
+
 # ============================================================
 # TITLE TEXTS
 # ============================================================

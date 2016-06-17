@@ -31,8 +31,9 @@ label prologue2_intro:
     ada "...Pusbag."
     sophia "Do you intend to move out soon, friend Ada?"
     ada "Why? This is an utter misuse of our capabilities."
-    sophia "Nevertheless, we have our orders. It is now up to use to carry them out to the best of our ability."
-    ada "I suppose so. I just wish I knew if it'll all matter in the end."
+    sophia "Nevertheless, we have our orders. It is now up to us to carry them out to the best of our ability."
+    ada "Hmph, it's not like I have anything better to do."
+    "...I just wish I knew if it'll all matter in the end."
     
     stop music fadeout 1
     scene bg blank with fade
@@ -52,6 +53,8 @@ label prologue2:
     nvl clear
     nvl show dissolveFast
     
+    show factionicon empire at truecenter, spinY with dissolve
+    
     nvlChar "Hundreds of years ago, the Legate Saktoth led the Imperial Vanguard Legion in battle against the foes of a burning Empire."
     nvlChar "He crushed the pirates threatening the imperial borders, then joined forces with the human purity advocates of the True Born to subdue the rebellious Free Machines. 
      With these martial triumphs under his banner, he was crowned Emperor."
@@ -66,7 +69,9 @@ label prologue2:
 
     nvl clear
     nvl hide dissolveFast
+    hide factionicon with dissolve
     stop music fadeout 1
+    pause 1
     
     show textimg prologue2 at truecenter with dissolve
     pause
@@ -94,7 +99,6 @@ label prologue2:
     "I'd admit, it's actually quite pretty. Calming, even."
     "The whole valley is like that, really. It's too bad it won't be that way for much longer now."
     show bg glacies sky with dissolve
-    "..."
     ada "...Well, we'd better get ready. If the Machines really are here, it's only a matter of time... and I don't intend to run away again."
     
 label prologue2_battle:
