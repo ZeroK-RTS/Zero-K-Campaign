@@ -33,10 +33,10 @@ label prologue1:
     
     show chapterTitle prologue1 at chapterTitlePos, chapterTitleAnim
     show chapterTitle2 prologue1 at chapterTitlePos2, chapterTitleAnim
-    pause 5
+    pause 3
     hide chapterTitle
     hide chapterTitle2
-    pause 2
+    pause 1.5
     
     "The tenth Planetwars."
     "The tenth of a series of conflicts in which leaders unleashed great armies of robots upon the galaxy, tearing it asunder in the name of ideology, justice or power."

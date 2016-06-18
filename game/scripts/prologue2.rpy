@@ -43,10 +43,10 @@ label prologue2:
     
     show chapterTitle prologue2 at chapterTitlePos, chapterTitleAnim
     show chapterTitle2 prologue2 at chapterTitlePos2, chapterTitleAnim
-    pause 5
+    pause 3
     hide chapterTitle
     hide chapterTitle2
-    pause 2
+    pause 1.5
         
     play music soundtracks["Intro"]
     

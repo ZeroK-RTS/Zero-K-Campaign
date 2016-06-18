@@ -66,10 +66,10 @@ label episode1:
     
     show chapterTitle episode1 at chapterTitlePos, chapterTitleAnim
     show chapterTitle2 episode1 at chapterTitlePos2, chapterTitleAnim
-    pause 5
+    pause 3
     hide chapterTitle
     hide chapterTitle2
-    pause 2
+    pause 1.5
     
     nvl clear
     nvl show dissolveFast
