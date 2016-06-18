@@ -7,6 +7,7 @@ image bg fieldsofisis = "images/bg/fields_of_isis.png"  #im.Scale("images/bg/fie
 image bg fieldsofisis sky = "images/bg/fields_of_isis_sky.png" #im.Scale("images/bg/fields_of_isis_sky.png", SCREENSIZE_X, SCREENSIZE_Y)
 image bg glacies = "images/bg/glacies.png"
 image bg glacies sky = "images/bg/glacies_sky.png"
+image bg fullmoon = "images/bg/fullmoon.png"
 image bg fullmoon sky = "images/bg/fullmoon_sky.png"
 image bg fullmoon sky semisepia = "images/bg/fullmoon_sky_semisepia.png"
 
@@ -29,11 +30,24 @@ image cg prologue2 ada = "images/cg/prologue2_ada_water.png"
 
 image cg episode1 promethean = "images/cg/episode1_promethean_flames.png"
 image cg episode1 promethean semisepia = "images/cg/episode1_promethean_flames_semisepia.png"
+image cg episode1 crippledpyro = "images/cg/episode1_crippledpyro.png"
+image cg episode1 crippledpyro2 = "images/cg/episode1_crippledpyro2.png"
+
+# ============================================================
+# ITEM IMAGES
+# ============================================================
+
+image map episode1 = "images/items/map_ep1.png"
 
 # ============================================================
 # ICONS
 # ============================================================
 image factionicon empire = im.FactorScale("images/icons/Empire3.png", 2)
+
+# ============================================================
+# UI
+# ============================================================
+
 
 # ============================================================
 # CHARACTERS
@@ -49,10 +63,10 @@ define nvlChar = Character("", kind=nvl)
 # ANIMATIONS
 # ============================================================
 transform chapterTitlePos:
-    xalign 0.42 yalign 0.36
+    xalign 0.45 yalign 0.36
     
 transform chapterTitlePos2:
-    xalign 0.58 yalign 0.5
+    xalign 0.55 yalign 0.5
 
 transform chapterTitleAnim(dt = 0.5):
     on show:
@@ -70,6 +84,19 @@ transform spinY(dt = 1):
         easeout dt xzoom 0
         easein dt xzoom 1
         repeat
+
+transform foldOutY(dt = 0.1):
+    yzoom 0
+    linear dt yzoom 1
+
+transform foldInY(dt = 0.2):
+    linear dt yzoom 0
+
+define fadeWhite = Fade(0.5,0,0.5,color='#ffffff')
+define fadeWhiteSlow = Fade(1,0.5,1,color='#ffffff')
+define flashWhite = Fade(0.1,0,0.1,color='#ffffff')
+define dissolveUp = ImageDissolve("images/gfx/dissolvegradient.png", 0.5)
+define dissolveBars = ImageDissolve("images/gfx/dissolvebars.png", 0.5)
 
 # ============================================================
 # TITLE TEXTS
@@ -115,6 +142,7 @@ init python:
         "Intense" : "<to 86.5>music/Intense.mp3",
         "March" : "<to 66>music/March.mp3",
         "March (alt)" : "<to 146.3>music/March (alt).mp3",
+        "Sentimental" : "<to 182.5>music/Sentimental.mp3",
         "Suspense" : "<to 113.3>music/Suspense.mp3",
         "Tension" : "<to 71.6>music/Tension.mp3",
     }

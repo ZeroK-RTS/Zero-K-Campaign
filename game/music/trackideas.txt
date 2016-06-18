@@ -14,3 +14,6 @@ Imminent danger:
 Alert:
 	Suspense (Celestial Aeon Project)
 	Tension (Celestial Aeon Project)
+	
+Sadness:
+	Sentimental (Celestial Aeon Project)

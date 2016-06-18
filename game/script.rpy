@@ -32,7 +32,7 @@ label missionStart(missionName, **kwargs):
     stop music fadeout 1
     scene bg blank with blinds
     
-    if kwargs["tutorial"]:
+    if kwargs.get("tutorial", False):
         menu:
             "Skip the tutorial mission?"
             "Yes":
@@ -40,7 +40,7 @@ label missionStart(missionName, **kwargs):
             "No":
                 pass
                 
-    elif kwargs["skippable"]:
+    elif kwargs.get("skippable", False):
         menu:
             "Skip this mission?"
             "Yes":
