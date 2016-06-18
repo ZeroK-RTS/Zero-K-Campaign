@@ -29,7 +29,7 @@ init python:
     #RESULTS_PATH = SPRING_DIR + "/" + "results.py"
     #RESULTS_PATH_COMPILED = SPRING_DIR + "/" + "results.pyo" # dunno if necessary to delete this as well
 
-    sys.path.append(SPRING_DIR)
+    #sys.path.append(SPRING_DIR)
     
     # TODO: write modules, special flags
     def getStartscriptSubstDict(missionName):
@@ -63,9 +63,18 @@ init python:
         testFile = open(SPRING_DIR + "/envVars.txt", 'w');
         testFile.write(s)
         testFile.close()
+        
+    def writeSysPaths():
+        s = ""
+        for path in sys.path:
+            s += path + "\n"
+        testFile = open(sys.path[0] + "/sysPaths.txt", 'w');
+        testFile.write(s)
+        testFile.close()
 
 label run_spring(missionName):    
     # $ writeEnvVars()  # debug
+    # $ writeSysPaths()
     
     while True:
         python:
@@ -111,5 +120,5 @@ label run_spring(missionName):
                 $ print("Retrying mission")
             "Ignore":
                 return 1
-    
+        
         

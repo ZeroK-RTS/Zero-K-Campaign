@@ -2,7 +2,7 @@
 {
 	MapName=Fields_Of_Isis;
 	StartposType=2;
-	GameType=Sunrise Prologue 1 - Running Start;
+	GameType=Sunrise Prologue 1 - Blood Dawn;
 	IsHost=1;
 	OnlyLocal=1;
 	MyPlayerName=Ada;

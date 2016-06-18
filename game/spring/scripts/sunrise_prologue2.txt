@@ -2,7 +2,7 @@
 {
 	MapName=Glacies 1.3;
 	StartposType=2;
-	GameType=Sunrise Prologue 2 - Cold Dawn;
+	GameType=Sunrise Prologue 2 - Cold Path;
 	IsHost=1;
 	OnlyLocal=1;
 	MyPlayerName=Ada;
