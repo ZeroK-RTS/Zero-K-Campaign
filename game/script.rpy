@@ -26,7 +26,7 @@ label start:
     jump prologue1_intro
 
 label missionStart(missionName, **kwargs):
-    play sound "sfx/weapon/blade/blade_swing.wav"
+    #play sound "sfx/weapon/blade/blade_swing.wav"
     show preBattleText at truecenter, chapterTitleAnim
     pause
     stop music fadeout 1

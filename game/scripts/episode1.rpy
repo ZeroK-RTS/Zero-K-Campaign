@@ -171,35 +171,40 @@ label episode1_outro:
     sophia "Indeed. The stasis chamber appears to have performed well above specifications."
     ada "Very funny."
     ada "Well, I still need to know what... oh."
-    "I..."
+    "..."
     
     scene bg fullmoon sky with dissolve
     play music soundtracks["Sentimental"] fadein 1
     sophia "I'm sorry, Ada."
-    "Everyone I ever knew is long dead. Mom... Dad... my kid brother... my best friend Izanagi..."
-    "Faces, places, events flash through my mind, one after another, but even as I try to catch them they slip through my fingers, as if they're already fading away."
+    "Everyone I ever knew is long dead."
+    "Mom... Dad... my kid brother... my best friend Izanagi..."
+    "Faces, places, events flash through my mind, one after another. Days at home, at the Academy, in the field, travelling the depths of the galaxy." 
+    "Yet even as I try to catch them they slip through my fingers, as if they're already fading away."
     sophia "..."
     ada "...Get me a mirror. Or something of the sort."
     scene bg blank with fade
     "A viewscreen appears, and I gaze into the stormy grey eyes of my own visage."
     "A hand comes up to touch my face. I feel the warm texture of my skin, almost afraid that too will disappear at any moment."
     ada "..."
-    "I dismiss the screen and lean back in my chair, breathing slowly."
+    "I dismiss the screen and lean back in my chair, eyes closed, breathing slowly."
     scene bg fullmoon with fade
     
     ada "Thanks."
     sophia "If you need more time, friend Ada..."
     ada "No, no, I'm alright."
     "(Well, I'm not, but sitting around moping won't help.)"
+    "I don't quite know where... when I am, or what's happened in those intervening millenia. But I do know it's never been in me to lie down and die for the whimsy of fate."
     stop music fadeout 3
     ada "So, what {i}else{/i} happened while I was asleep?"
     sophia "I can't say. I wasn't around to listen for much of that period myself, and it's been quiet even while I was up."
     ada "Fine. Can we rip some answers from these robots, then?"
     scene cg episode1 crippledpyro with dissolve
     "That looks like a good candidate."
+    play sound "sfx/weapon/hiss.wav"
     "The maimed Pyro glares defiantly at us as we approach, trying to turn on actuators that no longer function, hissing with a flamethrower whose fuel feed has long been severed."
     scene cg episode1 crippledpyro2 with dissolve
     ada "I want answers, machine. Your cooperation is not required."
+    play sound "sfx/weapon/electrical_crackle.wav"
     "The bot writhes and snarls as the cyberwarfare probe invades its mind. But such a simple AI, and damaged to boot, has no chance of resisting."
     "Before long the entire contents of its computer banks have been dumped to my own, and it falls silent."
     scene bg fullmoon with dissolve
@@ -208,8 +213,8 @@ label episode1_outro:
     ada "Not my fault! They were trying to kill us."
     "She shakes her head."
     sophia "No, friend Ada. This damage occured long before today's battle."
-    sophia "It's not entirely consistent with a viral attack either, or at least I can't find any traces of one. This looks like something went very wrong with the core control systems. 
-            These things belonged to the Liberated Humanity once, but no longer."
+    sophia "It's not entirely consistent with a viral attack either, or at least I can't find any traces of one. This looks like something went very wrong with the core control systems."
+    sophia "Suffice to say: These things belonged to the Liberated Humanity once, but no longer."
     ada "Sounds like we're probably not gonna get any more explanations from these scrap heaps."
     ada "I don't want to live the rest of my life here with a bunch of literally rabid murderbots for company, either. Is there some way to get off this rock?"
     sophia "That's the only other useful thing I managed to pull from this. Apparently there's a derelict dropship that crashed just a few hundred kilometers away, sometime after your stasis. 
@@ -219,6 +224,40 @@ label episode1_outro:
     play sound "sfx/reply/heavy_bot_move.wav"
     pause 1
     "..."
+    ada "Damn. She's magnificent."
+    ada "Wait, I remember. Isn't this the Project Haros prototype? I hadn't thought it was even finished."
+    sophia "Indeed. Her appearance here is a mystery, yet no less serendipitous for it."
+    play music soundtracks["Inspiring 2"] fadein 1
+    show edenblueprints at truecenter, foldOutY
+    show bg fullmoon with dissolve
+    "Her hull's a hundred and forty meters from bow to stern, its smooth contour broken up by sensor arrays and point defense clusters. 
+     The dark grey hullplates are marked with dull, paler patches, where repair bots had grafted in fresh armor over hull breaches. 
+     Even scarred and disfigured as she is, she's still... stately."
     
+    sophia "Dreamy, is she not? Alas, the war has not been kind to her."
+    ada "Damaged?"
+    sophia "Wormhole traversal's gutted, and we don't have the resources to fix it. I hope you don't mind walking at 2,000 c."
+    ada "That's 2,000 c faster than we can do right now. I'll take it."
+    ada "That said... I don't suppose you know where we can get some spare parts?"
+    sophia "Well... if we could get some parts and shop time in one of the old ship depots, repairs would be fairly uncomplicated. 
+            My records show there's one at Antikythera, 12.74 LY away... although anything could have happened between then and now."
+    show edenblueprints at foldInY
+    pause 0.5
+    hide edenblueprints
+    ada "Only one way to find out. Let's get this lady fixed up and get out of here."
+    
+    scene bg fullmoon sky with dissolve
+    ada "On that note, does she have a name?"
+    sophia "If she did, it's long lost to history now. That was one of piece of data that did not survive to the present."
+    ada "Mmm."
+    "I steeple my fingers, contemplating the wreck before me."
+    ada "I suppose that means we get to rechristen it. Got any ideas?"
+    sophia "It's your ship, friend Ada. You should decide the name."
+    scene bg blank with fade
+    ada "Well then... she shall be the {i}Shadow of Eden{/i}."
+    
+    pause 0.5
     "To be continued..."
+    stop music fadeout 0.5
+    pause 0.5
     return

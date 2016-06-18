@@ -77,8 +77,8 @@ label prologue2:
     pause
     hide textimg with dissolveFast
     
+    play music "sfx/ambience/outdoor-windy-ambience.ogg" fadein 0.5
     scene bg glacies with fade
-    play music "sfx/ambience/outdoor-windy-ambience.ogg"
     "The wind howls over the snowscaped valley. Even inside my climate-controlled cockpit, I can feel the cold biting into my face."
     "After that last debacle, the 13th has been moved out to the lonely little world of CB-135. The rebels have been stopped – for now – but now the Free Machines are closing in."
     "An advance force has been confirmed in this sector. Command has dispatched us here to perform a reconnaisance-in-force and turn back the enemy incursion if we can."

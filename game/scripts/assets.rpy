@@ -36,8 +36,8 @@ image cg episode1 crippledpyro2 = "images/cg/episode1_crippledpyro2.png"
 # ============================================================
 # ITEM IMAGES
 # ============================================================
-
 image map episode1 = "images/items/map_ep1.png"
+image edenblueprints = "images/items/eden_blueprints.png"
 
 # ============================================================
 # ICONS
@@ -53,7 +53,7 @@ image factionicon empire = im.FactorScale("images/icons/Empire3.png", 2)
 # CHARACTERS
 # ============================================================
 define ada = Character("Ada", color = '#0df5f3')
-define sophia = Character("Sophia", color = '#008080')
+define sophia = Character("Sophia", color = '#60b0b0')
 define imperial = Character("Imperial Unit", color = '#9600FF')
 define imperialColonel = Character("Imperial Colonel", color = '#9600FF')
 define rebels = Character("Rebel Units", color = '#FF4141')
@@ -138,6 +138,7 @@ init python:
     soundtracks = {
         "Evacuation (Action)" : "<to 103>music/Evacuation (Action).mp3",
         "Inspiring" : "<to 106>music/Inspiring.mp3",
+        "Inspiring 2" : "<to 153>music/Inspiring 2.mp3",
         "Intro" : "<to 71>music/Intro.mp3",
         "Intense" : "<to 86.5>music/Intense.mp3",
         "March" : "<to 66>music/March.mp3",
