@@ -236,7 +236,6 @@ game/saves
 #############
 ## Misc.
 #############
-spring/
 temp/
 *.smf
 *.smt
