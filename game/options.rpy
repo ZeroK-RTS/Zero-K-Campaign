@@ -293,8 +293,7 @@ init -1 python hide:
     #########################################
     ## More customizations can go here.
     
-    #config.keymap['game_menu'].remove('mouseup_3')
-    config.keymap['game_menu'].append('mouseup_3')
+    config.window_icon = "images/ZK_logo_128.png"
 
 ## This section contains information about how to build your project into
 ## distribution files.
