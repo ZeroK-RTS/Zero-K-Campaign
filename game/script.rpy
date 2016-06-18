@@ -7,15 +7,12 @@ init python:
     SCREENSIZE_Y = config.screen_height
     CENTER_TUPLE = (0.5, 1.0, 0.5, 1.0)
 
-define dissolveFast = Dissolve(0.2)
-define dissolveExtraFast = Dissolve(0.1)
+init -3:
+    define dissolveFast = Dissolve(0.2)
+    define dissolveExtraFast = Dissolve(0.1)
 
-init python:
-    def CloseNavigation():
-        #if not renpy.get_screen("main_menu"):
-            Return()
-        #else:
-        #    Hide("navigation")
+#init python:
+    #_game_menu_screen = "save"
 
 # ============================================================
 # ============================================================
@@ -48,7 +45,7 @@ label missionStart(missionName, **kwargs):
             "No":
                 pass
             
-    call run_spring(missionName)
+    call run_spring(missionName) from _call_run_spring
     $renpy.block_rollback() 
     return _return 
 

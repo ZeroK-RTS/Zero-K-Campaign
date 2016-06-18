@@ -109,27 +109,29 @@ image zklogo = "images/zk_logo.png"
 
 image zklogo mainmenu:
     "images/zk_logo.png"
-    xalign 0.3 ypos 0.2 yanchor 0.5 alpha 0 xzoom 0
-    linear 0.15 xalign 0.5 alpha 1 xzoom 1
+    xalign 0.3 ypos 0.2 yanchor 0.5 #alpha 0 xzoom 0
+    #linear 0.2 xalign 0.5 alpha 1 xzoom 1
+    xalign 0.5
 
 image titleSunrise:
-    0.4
+    #0.4
     Text("sunrise", size=64, outlines={(2,"#222",3,3)})
-    xalign 0.8 ypos 0.32 yanchor 0.5 alpha 0 xzoom 0 
-    linear 0.15 xalign 0.7 alpha 1 xzoom 1
+    xalign 0.8 ypos 0.32 yanchor 0.5 #alpha 0 xzoom 0 
+    #linear 0.2 xalign 0.7 alpha 1 xzoom 1
+    xalign 0.7
 
 image gameOverText = Text("game over", size=48, outlines={(2,"#222",3,3)})
     
 image preBattleText = Text("PREPARE FOR BATTLE", size=64, outlines={(3,"#222",2,2)})
 
 image chapterTitle prologue1 = MakeTitleText("Prologue 1")
-image chapterTitle2 prologue1 = MakeTitleText("Blood Dawn")
+image chapterTitle2 prologue1 = MakeTitleText("Blood Dawn", 60)
 
 image chapterTitle prologue2 = MakeTitleText("Prologue 2")
-image chapterTitle2 prologue2 = MakeTitleText("Cold Path")
+image chapterTitle2 prologue2 = MakeTitleText("Cold Path", 60)
 
 image chapterTitle episode1 = MakeTitleText("Episode 1")
-image chapterTitle2 episode1 = MakeTitleText("Awakening")
+image chapterTitle2 episode1 = MakeTitleText("Awakening", 60)
 
 # ============================================================
 # MUSIC

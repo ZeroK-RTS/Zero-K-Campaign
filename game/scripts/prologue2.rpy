@@ -32,7 +32,7 @@ label prologue2_intro:
     sophia "Do you intend to move out soon, friend Ada?"
     ada "Why? This is an utter misuse of our capabilities."
     sophia "Nevertheless, we have our orders. It is now up to us to carry them out to the best of our ability."
-    ada "Hmph, it's not like I have anything better to do."
+    ada "Hmph... fine, it's not like I have anything better to do."
     "...I just wish I knew if it'll all matter in the end."
     
     stop music fadeout 1
@@ -87,7 +87,7 @@ label prologue2:
     "Besides, if we put up a good fight, we might even drag the war out long enough for a negotiated settlement... Ha! That'll be the day."
     sophia "No sign of the enemy just yet. We have an opportunity to dig in and prepare for the upcoming engagement."
     ada "They probably decided to stay home. Even the Machines know better than to come to this iceball."
-    sophia "Outside air temperature is only 254 K, friend Ada."
+    sophia "Ambient air temperature is only 254 K, friend Ada."
     ada "That's negative 19 degrees C!"
     sophia "Negative 19.25°C, friend Ada. Precision is important in such matters."
     ada "Ugh. Look, it's really cold, alright?"
@@ -95,11 +95,11 @@ label prologue2:
     scene cg prologue2 ada with dissolve
     ada "Actually, why isn't the river frozen?"
     sophia "It's not actually a river. It's an... elongated lake formed in a recessed channel when local geothermal activity melted the snow. Actually, I think at least one end connects to an underground aquifer as well."
-    ada" Interesting."
+    ada "Interesting..."
     "I'd admit, it's actually quite pretty. Calming, even."
-    "The whole valley is like that, really. It's too bad it won't be that way for much longer now."
+    "The whole valley is like that, really. Too bad it won't be that way for much longer now. I hate to despoil a place like this, but..."
     show bg glacies sky with dissolve
-    ada "...Well, we'd better get ready. If the Machines really are here, it's only a matter of time... and I don't intend to run away again."
+    ada "...Well, we'd better get ready. If the Machines really are here, it's only a matter of time... and I don't intend to run away this time."
     
 label prologue2_battle:
     call missionStart("sunrise_prologue2", tutorial=True)
@@ -131,6 +131,7 @@ label prologue2_outro:
     imperial "All units are to return to Hadrian at once. Command wants the incursion stopped here and the Promethean neutralized. Do you copy?"
     ada "Copy, command. Returning to base."
     scene bg blank with fade
+    "The Promethean... he's a canny one. Taking him down won't be easy."
     ada "Well, Sophia, our weekend just got a whole lot more interesting."
     
     stop music fadeout 1

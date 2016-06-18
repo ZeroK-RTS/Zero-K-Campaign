@@ -34,8 +34,8 @@ label episode1_intro:
     "The enemy's weapons tear great gaps in what remains of our line."
     "The screams of falling Imperial bots fills the comm channel, for even our war machines know fear, especially at a time like this."
     play sound "sfx/weapon/laser/heavy_laser3.wav"
-    "They fight on as bravely as the Emperor could ask, yet the outcome is already all but certain."
-    
+    "They fight on as bravely as the Emperor could ask, yet the outcome is already all but certain. They are taken apart by the dozens, their debris piling on the asteroid's dust."
+    play sound "sfx/weapon/cannon/large_cannon_fire.wav"
     ada "Is there nothing we can do, Sophia?!"
     sophia "I am sorry, friend Ada. But it would take a miracle to extricate ourselves from this situation."
     
@@ -58,7 +58,7 @@ label episode1_intro:
     scene bg white with Shake(CENTER_TUPLE, 2.0, dist=24)
     "... ... ..."
     scene bg blank with fade
-    pause 3
+    pause 1
     
 label episode1:
     $ renpy.movie_cutscene("videos/op.webm")
@@ -134,17 +134,19 @@ label episode1:
     scene cg episode1 promethean semisepia with flashWhite
     pause 0.5
     scene bg fullmoon with flashWhite
-    "I exhale slowly."
+    "..."
+    "I exhale slowly, pushing the flashbacks from my mind."
     ada "So, what happened after that?"
     sophia "You were put into cryostasis as per standard operating procedure. I, too, entered suspension, waking only periodically to try and extricate us."
-    sophia "Progress was slow. Our power supply was critically damaged, and I dared not emerge till I could be certain no enemies were around. 
+    sophia "Progress was slow. Our power supply was critically damaged, and I dared not emerge till I could be certain no enemies were around."
+    sophia "After that, we still had to conserve power, as the asteroid was too far from its primary to power our solar collectors.
             Eventually, I managed to pull us out and scrape together enough local resources to restore most of our functionality."
-    ada "Okay... but why do I get the feeling it's not all good news?"
-    sophia "Because of this."
+    ada "Okay... and that's when you woke me up?"
+    sophia "No, friend Ada. I woke you up because of this."
     
     show map episode1 at truecenter, foldOutY
-    pause 1.5
     play music soundtracks["Tension"] fadein 1
+    pause 1.5
     ada "...We're surrounded by potential hostiles."
     sophia "Indeed. I hope your brain's fully thawed out, Ada, as I expect the situation to get hot very soon."
     
@@ -163,10 +165,11 @@ label episode1_outro:
     scene bg fullmoon with fade
     
     sophia "Well done, friend Ada. I see hibernation hasn't slowed you down."
-    ada "Thanks. So, what happened in that time? Feels like I've been out for...{nw}"
+    ada "Thanks."
+    ada "So, what happened in all that time? Feels like I've been out for...{nw}"
     #pause 0.1
     play sound "sfx/explosion/ex_small14.wav"
-    ada "Thanks. So, what happened in that time? Feels like I've been out for...{fast}THREE THOUSAND AND TWENTY-FIVE YEARS!?" with hpunch
+    ada "So, what happened in all that time? Feels like I've been out for...{fast}THREE THOUSAND AND TWENTY-FIVE YEARS!?" with hpunch
     "That... that's all kinds of messsed up."
     sophia "Indeed. The stasis chamber appears to have performed well above specifications."
     ada "Very funny."
@@ -176,15 +179,15 @@ label episode1_outro:
     scene bg fullmoon sky with dissolve
     play music soundtracks["Sentimental"] fadein 1
     sophia "I'm sorry, Ada."
-    "Everyone I ever knew is long dead."
-    "Mom... Dad... my kid brother... my best friend Izanagi..."
+    "Yes... everyone I ever knew is long dead."
+    "Mum... Dad... my kid brother... my best friend Izanagi..."
     "Faces, places, events flash through my mind, one after another. Days at home, at the Academy, in the field, travelling the depths of the galaxy." 
     "Yet even as I try to catch them they slip through my fingers, as if they're already fading away."
     sophia "..."
     ada "...Get me a mirror. Or something of the sort."
     scene bg blank with fade
     "A viewscreen appears, and I gaze into the stormy grey eyes of my own visage."
-    "A hand comes up to touch my face. I feel the warm texture of my skin, almost afraid that too will disappear at any moment."
+    "I watch a hand come up to touch the face. I feel the warm texture of my skin, almost afraid that too will disappear at any moment."
     ada "..."
     "I dismiss the screen and lean back in my chair, eyes closed, breathing slowly."
     scene bg fullmoon with fade
@@ -193,7 +196,8 @@ label episode1_outro:
     sophia "If you need more time, friend Ada..."
     ada "No, no, I'm alright."
     "(Well, I'm not, but sitting around moping won't help.)"
-    "I don't quite know where... when I am, or what's happened in those intervening millenia. But I do know it's never been in me to lie down and die for the whimsy of fate."
+    "I don't quite know where... when I am, or what's happened in those intervening millenia. I don't even know if I have a purpose to exist, displaced so far from my own time."
+    "But I do know it's never been in me to lie down and die for the whimsy of fate."
     stop music fadeout 3
     ada "So, what {i}else{/i} happened while I was asleep?"
     sophia "I can't say. I wasn't around to listen for much of that period myself, and it's been quiet even while I was up."
@@ -203,7 +207,7 @@ label episode1_outro:
     play sound "sfx/weapon/hiss.wav"
     "The maimed Pyro glares defiantly at us as we approach, trying to turn on actuators that no longer function, hissing with a flamethrower whose fuel feed has long been severed."
     scene cg episode1 crippledpyro2 with dissolve
-    ada "I want answers, machine. Your cooperation is not required."
+    #ada "I want answers, machine. Your cooperation is not required."
     play sound "sfx/weapon/electrical_crackle.wav"
     "The bot writhes and snarls as the cyberwarfare probe invades its mind. But such a simple AI, and damaged to boot, has no chance of resisting."
     "Before long the entire contents of its computer banks have been dumped to my own, and it falls silent."
@@ -251,7 +255,7 @@ label episode1_outro:
     sophia "If she did, it's long lost to history now. That was one of piece of data that did not survive to the present."
     ada "Mmm."
     "I steeple my fingers, contemplating the wreck before me."
-    ada "I suppose that means we get to rechristen it. Got any ideas?"
+    ada "I suppose that means we get to rechristen it. What do you think?"
     sophia "It's your ship, friend Ada. You should decide the name."
     scene bg blank with fade
     ada "Well then... she shall be the {i}Shadow of Eden{/i}."

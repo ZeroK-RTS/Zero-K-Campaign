@@ -9,7 +9,7 @@
 
 init -1 python:
     ## This controls where the VN looks for Spring engine files.
-    
+    ## TODO: needs Linux support
     # My Games/Spring/campaign/game/../../engine/100.0
     SPRING_DIR = "D:/Games/Spring/engine/100.0" #"sys.path[0]/../../engine/100.0"
 
@@ -27,9 +27,10 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "Zero-K Sunrise"
-    config.version = "0.0"
+    config.version = "0.1"
     
     config.developer = True
+    config.autoreload = False
 
     #########################################
     # Themes
@@ -78,6 +79,7 @@ init -1 python hide:
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
         gm_root = "cg mainmenu grayscale",
+        #gm_root = "#0008",
         
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -206,21 +208,24 @@ init -1 python hide:
 
     #########################################
     ## Transitions.
+    ## See https://www.renpy.org/doc/html/config.html#transitions for help
 
     ## Used when entering the game menu from the game.
     config.enter_transition = None
 
     ## Used when exiting the game menu to the game.
-    config.exit_transition = None
+    config.exit_transition = dissolveFast
 
     ## Used between screens of the game menu.
-    config.intra_transition = None
+    config.intra_transition = dissolveFast
 
-    ## Used when entering the game menu from the main menu.
-    config.main_game_transition = Fade(1,0,0)
+    ## The transition used when entering the game menu from the main menu, as is done when clicking "Load Game" or "Preferences".
+    config.main_game_transition = dissolveFast
 
-    ## Used when returning to the main menu from the game.
-    config.game_main_transition = None
+    ## The transition that is used to display the main menu after leaving the game menu. 
+    ## This is used when the load and preferences screens are invoked from the main menu, 
+    ## and it's also used when the user picks "Main Menu" from the game menu.
+    config.game_main_transition = dissolveFast
 
     ## Used when entering the main menu from the splashscreen.
     config.end_splash_transition = Fade(0,0,1)
@@ -229,13 +234,13 @@ init -1 python hide:
     config.end_game_transition = Fade(1,0,1)
 
     ## Used when a game is loaded.
-    config.after_load_transition = None
+    config.after_load_transition = dissolve
 
     ## Used when the window is shown.
-    config.window_show_transition = None
+    config.window_show_transition = dissolve
 
     ## Used when the window is hidden.
-    config.window_hide_transition = None
+    config.window_hide_transition = dissolve
 
     ## Used when showing NVL-mode text directly after ADV-mode text.
     config.adv_nvl_transition = dissolve
@@ -287,3 +292,70 @@ init -1 python hide:
 
     #########################################
     ## More customizations can go here.
+    
+    #config.keymap['game_menu'].remove('mouseup_3')
+    config.keymap['game_menu'].append('mouseup_3')
+
+## This section contains information about how to build your project into
+## distribution files.
+init python:
+
+    ## The name that's used for directories and archive files. For example, if
+    ## this is 'mygame-1.0', the windows distribution will be in the
+    ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
+    build.directory_name = "Zero-K Sunrise"
+
+    ## The name that's uses for executables - the program that users will run
+    ## to start the game. For example, if this is 'mygame', then on Windows,
+    ## users can click 'mygame.exe' to start the game.
+    build.executable_name = "Sunrise"
+
+    ## If True, Ren'Py will include update information into packages. This
+    ## allows the updater to run.
+    build.include_update = False
+
+    ## File patterns:
+    ##
+    ## The following functions take file patterns. File patterns are case-
+    ## insensitive, and matched against the path relative to the base
+    ## directory, with and without a leading /. If multiple patterns match,
+    ## the first is used.
+    ##
+    ##
+    ## In a pattern:
+    ##
+    ## /
+    ##     Is the directory separator.
+    ## *
+    ##     Matches all characters, except the directory separator.
+    ## **
+    ##     Matches all characters, including the directory separator.
+    ##
+    ## For example:
+    ##
+    ## *.txt
+    ##     Matches txt files in the base directory.
+    ## game/**.ogg
+    ##     Matches ogg files in the game directory or any of its subdirectories.
+    ## **.psd
+    ##    Matches psd files anywhere in the project.
+
+    ## Classify files as None to exclude them from the built distributions.
+
+    build.classify('**~', None)
+    build.classify('**.bak', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)
+    build.classify('**/thumbs.db', None)
+
+    ## To archive files, classify them as 'archive'.
+
+    # build.classify('game/**.png', 'archive')
+    # build.classify('game/**.jpg', 'archive')
+
+    ## Files matching documentation patterns are duplicated in a mac app
+    ## build, so they appear in both the app and the zip file.
+
+    build.documentation('*.html')
+    build.documentation('*.txt')
+    
