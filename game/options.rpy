@@ -28,6 +28,8 @@ init -1 python hide:
     # with tracebacks and other debugging logs.
     config.name = "Zero-K Sunrise"
     config.version = "0.0"
+    
+    config.developer = True
 
     #########################################
     # Themes
@@ -95,7 +97,7 @@ init -1 python hide:
     ## are the size of the left/right and top/bottom borders,
     ## respectively.
 
-    # style.window.background = Frame("frame.png", 12, 12)
+    style.window.background = "images/ui/textwindow.png"
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
@@ -108,15 +110,15 @@ init -1 python hide:
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
-    # style.window.right_padding = 6
-    # style.window.top_padding = 6
-    # style.window.bottom_padding = 6
+    style.window.left_padding = 8
+    style.window.right_padding = 8
+    style.window.top_padding = 8
+    style.window.bottom_padding = 8
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    # style.window.yminimum = 250
+    style.window.yminimum = 150
 
 
     #########################################
