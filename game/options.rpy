@@ -12,9 +12,14 @@ init -1 python:
     ## TODO: needs Linux support
     # My Games/Spring/campaign/game/../../engine/100.0
     SPRING_DIR = "D:/Games/Spring/engine/100.0" #"sys.path[0]/../../engine/100.0"
+    
+    ## TODO: untested
+    ## If engine was not downloaded with ZKL, tell it where to find Spring data dir
+    SPRING_DATADIR = None      #"../"      # "C:/Users/Rattlesnark/Documents/My Games/Spring"
 
 init -1 python hide: 
     ## These control the width and height of the screen.
+    ## Changing this would require redoing the UI or at least implementing resizing, don't touch it!
 
     config.screen_width = 1280
     config.screen_height = 768

@@ -21,8 +21,8 @@ init python:
     
     EXECUTABLE_PATH = SPRING_DIR + "/spring"
     EXECUTABLE_PATH_WIN = EXECUTABLE_PATH + ".exe"
-    SPRING_DATADIR = sys.path[0] + "/game/spring"
-    SCRIPT_DIR = SPRING_DATADIR + "/scripts/"
+    SPRING_DATADIR_SUNRISE = sys.path[0] + "/game/spring"
+    SCRIPT_DIR = SPRING_DATADIR_SUNRISE + "/scripts/"
     SCRIPT_FILENAME_TEMP = "_script.txt"
     SCRIPT_PATH_TEMP = SPRING_DIR + "/" + SCRIPT_FILENAME_TEMP
     RESULTS_PATH = SPRING_DIR + "/" + "cache/mission_results.json"
@@ -83,7 +83,10 @@ label run_spring(missionName):
             #envVars = dict(os.environ.copy())
             if "SDL_VIDEODRIVER" in os.environ:
                 del os.environ["SDL_VIDEODRIVER"]
-            os.environ["SPRING_DATADIR"] = SPRING_DATADIR
+            if SPRING_DATADIR is None:
+                os.environ["SPRING_DATADIR"] = SPRING_DATADIR_SUNRISE
+            else:
+                os.environ["SPRING_DATADIR"] = SPRING_DATADIR_SUNRISE + ":" + SPRING_DATADIR
             if platform.system() == 'Windows':
                 executablePath = EXECUTABLE_PATH_WIN
             else:
