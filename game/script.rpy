@@ -44,7 +44,8 @@ label missionStart(missionName, **kwargs):
                 return 1
             "No":
                 pass
-            
+    
+    $renpy.block_rollback()
     call run_spring(missionName) from _call_run_spring
     $renpy.block_rollback() 
     return _return 
