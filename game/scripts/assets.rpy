@@ -47,17 +47,27 @@ image factionicon empire = im.FactorScale("images/icons/Empire3.png", 2)
 # ============================================================
 # UI
 # ============================================================
-
+image ctcicon:
+    "images/ui/textarrow.png"
+    xalign 0.98 yalign 0.98
+image ctcicon nvl:
+    im.Scale("images/ui/textarrow.png", 24, 24)
+    yalign 0.5 yoffset 2
+    xanchor 0.5 xoffset 16
+    
+image ctc = At("ctcicon", blink(1))
+image ctc nvl = At("ctcicon nvl", blink(1))
 
 # ============================================================
 # CHARACTERS
 # ============================================================
-define ada = Character("Ada", color = '#0df5f3')
-define sophia = Character("Sophia", color = '#60b0b0')
-define imperial = Character("Imperial Unit", color = '#9600FF')
-define imperialColonel = Character("Imperial Colonel", color = '#9600FF')
-define rebels = Character("Rebel Units", color = '#FF4141')
-define nvlChar = Character("", kind=nvl)
+define narrator = Character("", ctc = "ctc", ctc_position = "fixed")
+define ada = Character("Ada", color = '#0df5f3', ctc = "ctc", ctc_position = "fixed")
+define sophia = Character("Sophia", color = '#60b0b0', ctc = "ctc", ctc_position = "fixed")
+define imperial = Character("Imperial Unit", color = '#9600FF', ctc = "ctc", ctc_position = "fixed")
+define imperialColonel = Character("Imperial Colonel", color = '#9600FF', ctc = "ctc", ctc_position = "fixed")
+define rebels = Character("Rebel Units", color = '#FF4141', ctc = "ctc", ctc_position = "fixed")
+define nvlChar = Character("", kind=nvl, ctc = "ctc nvl")
 
 # ============================================================
 # ANIMATIONS
@@ -83,6 +93,13 @@ transform spinY(dt = 1):
         easein dt xzoom -1
         easeout dt xzoom 0
         easein dt xzoom 1
+        repeat
+
+transform blink(dt = 1.0, min = 0, max = 1):
+    alpha max
+    block:
+        linear (dt*0.5) alpha min
+        linear (dt*0.5) alpha max
         repeat
 
 transform foldOutY(dt = 0.1):
