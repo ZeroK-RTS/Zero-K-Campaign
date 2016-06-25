@@ -9,7 +9,7 @@ label prologue2_intro:
     ada "Home sweet home. Looks like everyone's busy."
     ada "Now we just need to go find the Colonel and see how we can make ourselves useful."
     play sound "sfx/explosion/ex_small14.wav"
-    "???" "CAEDMON!!" with hpunch
+    unknown "CAEDMON!!" with hpunch
     "I just about jump out of my skin at the booming voice. Ugh... at least with the direct neural feed my eardrums aren't physically hurt... though I'll probably get a migraine if this keeps up."
     scene cg prologue2 desertbase2 with dissolve
     ada "Yes, Colonel?"

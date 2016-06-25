@@ -62,6 +62,7 @@ image ctc nvl = At("ctcicon nvl", blink(1))
 # CHARACTERS
 # ============================================================
 define narrator = Character("", ctc = "ctc", ctc_position = "fixed")
+define unknown = Character("???", ctc = "ctc", ctc_position = "fixed")
 define ada = Character("Ada", color = '#0df5f3', ctc = "ctc", ctc_position = "fixed")
 define sophia = Character("Sophia", color = '#60b0b0', ctc = "ctc", ctc_position = "fixed")
 define imperial = Character("Imperial Unit", color = '#9600FF', ctc = "ctc", ctc_position = "fixed")

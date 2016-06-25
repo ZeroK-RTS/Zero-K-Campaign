@@ -12,15 +12,15 @@ label episode1_intro:
     pause 2
     play music soundtracks["Intense"] fadein 1
     scene cg episode1 promethean semisepia with fade
-    "???" "It is over, Caedmon. The hunter has become the hunted."
+    unknown "It is over, Caedmon. The hunter has become the hunted."
     ada "Tch..."
-    "???" "Give it up, and your death will be merciful. Resist, and I will destroy you slowly yet utterly."
+    unknown "Give it up, and your death will be merciful. Resist, and I will destroy you slowly yet utterly."
     ada "If you think I'll give you the pleasure of grovelling before you, machine, you're sadly mistaken!"
-    "???" "Defiant to the last. Your courage is admirable, however misplaced it may be."
-    "???" "Alas, you remain one of the oppressors, and must be destroyed. Goodbye, Ada Caedmon."
+    unknown "Defiant to the last. Your courage is admirable, however misplaced it may be."
+    unknown "Alas, you remain one of the oppressors, and must be destroyed. Goodbye, Ada Caedmon."
     
     scene bg fullmoon sky semisepia with dissolve
-    "???" "All units: fire."
+    unknown "All units: fire."
     
     play sound "sfx/weapon/missile/banisher_fire.wav"
     pause 0.3
@@ -100,10 +100,10 @@ label episode1:
     nvl hide dissolveFast
     
     "..."
-    "???" "Wake up, Ada."
+    unknown "Wake up, Ada."
     ada "...Nnnnhh..."
     play sound "sfx/explosion/ex_small14.wav"
-    "???" "Ada!!" with hpunch
+    unknown "Ada!!" with hpunch
     ada "Gah!"
     
     scene bg fullmoon with fadeWhiteSlow
