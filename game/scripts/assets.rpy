@@ -11,6 +11,10 @@ image bg fullmoon = "images/bg/fullmoon.png"
 image bg fullmoon sky = "images/bg/fullmoon_sky.png"
 image bg fullmoon sky semisepia = "images/bg/fullmoon_sky_semisepia.png"
 
+image galaxy = im.Scale("images/galaxy4.jpg", SCREENSIZE_X, SCREENSIZE_Y)
+
+image galaxy space1 = im.FactorScale("images/bg/space/1.jpg", 0.7)
+
 # ============================================================
 # CG
 # ============================================================   
@@ -57,6 +61,8 @@ image ctcicon nvl:
     
 image ctc = At("ctcicon", blink(1))
 image ctc nvl = At("ctcicon nvl", blink(1))
+
+image planetDetailsFrame = Frame("images/ui/planetdetail.png")
 
 # ============================================================
 # CHARACTERS
@@ -109,6 +115,35 @@ transform foldOutY(dt = 0.1):
 
 transform foldInY(dt = 0.2):
     linear dt yzoom 0
+    
+transform planetDetailPos:
+    xalign 0.05 yalign 0.5
+    
+transform zoomInFromGalaxy(planetPos):
+    alpha 0 zoom 0 xalign planetPos[0] yalign planetPos[1]
+    delay 0.5
+    parallel:
+        ease 1.2 alpha 1
+    parallel:
+        ease 1.1 xalign 0.5 yalign 0.5
+    parallel:
+        ease 1 zoom 1
+        
+transform zoomInGalaxy(planetPos):
+    parallel:
+        ease 2.2 zoom 10
+    parallel:
+        delay 1
+        linear 3 alpha 0 
+    parallel:
+        ease 1.5 xalign planetPos[0] yalign planetPos[1]
+        
+transform planetZoomIn(planet):
+    xalign planet.pos[0] yalign planet.pos[1] size planet.mapSize alpha 1
+    parallel:
+        ease 1.1 xalign 0.05 yalign 0.5
+    parallel:
+        ease 1.1 size planet.size alpha 1
 
 define fadeWhite = Fade(0.5,0,0.5,color='#ffffff')
 define fadeWhiteSlow = Fade(1,0.5,1,color='#ffffff')
@@ -163,6 +198,7 @@ init python:
         "Intense" : "<to 86.5>music/Intense.mp3",
         "March" : "<to 66>music/March.mp3",
         "March (alt)" : "<to 146.3>music/March (alt).mp3",
+        "Pirates" : "<to 124.4>music/Pirates.mp3",
         "Sentimental" : "<to 182.5>music/Sentimental.mp3",
         "Suspense" : "<to 113.3>music/Suspense.mp3",
         "Tension" : "<to 71.6>music/Tension.mp3",

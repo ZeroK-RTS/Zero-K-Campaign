@@ -19,6 +19,7 @@ init -3:
 
 # The game starts here.
 label start:
+    $ store.campaign = "sunrise"
     stop music fadeout 1
     jump prologue1_intro
 
@@ -50,11 +51,15 @@ label missionStart(missionName, **kwargs):
     $renpy.block_rollback() 
     return _return 
 
-label gameOver:
+label gameOver(missionName):
+    if (missionName is not None) and (missionName in store.missionsCompleted):
+        call galaxyMap(fade)
+    
     scene cg mainmenu grayscale with fade
     show gameOverText at truecenter with dissolve
     pause
     scene bg blank with pixellate
+    $renpy.full_restart()
     return
 
 label chapterEnd:

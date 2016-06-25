@@ -157,7 +157,7 @@ label episode1_battle:
     call missionStart("sunrise_episode1", skippable=True)
     
     if _return == 0:
-        jump gameOver
+        call gameOver("episode1")
     if _return == -1:
         return
     
@@ -260,8 +260,17 @@ label episode1_outro:
     scene bg blank with fade
     ada "Well then... she shall be the {i}Shadow of Eden{/i}."
     
+    stop music fadeout 2
+    #reverse compatibility
+    $ store.campaign = "sunrise"
+    $ store.missionsUnlocked["episode1"] = True
+    $ store.missionsCompleted["episode1"] = True
     pause 0.5
-    "To be continued..."
-    stop music fadeout 0.5
-    pause 0.5
+    
+    "Galaxy map enabled!"
+    
+    play music soundtracks["Pirates"] fadein 1
+    call galaxyMap(fade)
+    
+    
     return
