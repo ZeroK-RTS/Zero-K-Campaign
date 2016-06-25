@@ -39,7 +39,7 @@ label prologue2_intro:
     scene bg blank with fade
     
 label prologue2:
-    $ renpy.movie_cutscene("videos/op.webm")
+    #$ renpy.movie_cutscene("videos/op.webm")
     
     show chapterTitle prologue2 at chapterTitlePos, chapterTitleAnim
     show chapterTitle2 prologue2 at chapterTitlePos2, chapterTitleAnim

@@ -61,7 +61,7 @@ label episode1_intro:
     pause 1
     
 label episode1:
-    $ renpy.movie_cutscene("videos/op.webm")
+    #$ renpy.movie_cutscene("videos/op.webm")
     scene bg blank with fade
     
     show chapterTitle episode1 at chapterTitlePos, chapterTitleAnim
